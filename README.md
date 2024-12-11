@@ -9,4 +9,5 @@
   <p>Welcome to the repository of my solutions to Code of Advent 2024<p/>
 </div>
 
+Each day has it's own README.md<br>
 Have fun browsing around, and feel free to reach out to me if you have any questions! ^^

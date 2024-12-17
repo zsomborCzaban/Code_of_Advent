@@ -38,15 +38,15 @@ public class LinkedListNode<T> {
     }
 
     public void addBefore(T data){
-        //this.elementBefore = new CustomLinkedList<T>(data, this.elementBefore, this);
-        LinkedListNode<T> newNode = new LinkedListNode<T>(data, this.nodeBefore, this);
+        //this.elementBefore = new CustomLinkedList<>(data, this.elementBefore, this);
+        LinkedListNode<T> newNode = new LinkedListNode<>(data, this.nodeBefore, this);
         if(nodeBefore != null) this.nodeBefore.nodeAfter = newNode;
         this.nodeBefore = newNode;
     }
 
     public void addAfter(T data){
-        //this.elementAfter = new CustomLinkedList<T>(data, this, this.elementAfter);
-        LinkedListNode<T> newNode = new LinkedListNode<T>(data, this, this.nodeAfter);
+        //this.elementAfter = new CustomLinkedList<>(data, this, this.elementAfter);
+        LinkedListNode<T> newNode = new LinkedListNode<>(data, this, this.nodeAfter);
         if(nodeAfter != null) this.nodeAfter.nodeBefore = newNode;
         this.nodeAfter = newNode;
     }

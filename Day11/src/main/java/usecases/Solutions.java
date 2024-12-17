@@ -1,15 +1,13 @@
+package usecases;
+
 import utils.LinkedListNode;
+
 import java.util.ArrayList;
-import java.util.LinkedList;
 
-public class Main {
-    public static void main(String[] args) {
-//        solveWithArrayList(75); //the order doesnt matter so we dont have to keep it, but its still not faster
-        solveWithLinkedList(25);
-    }
+public class Solutions {
 
-    private static void solveWithLinkedList(int blinks){
-        LinkedListNode<Long> inputHead = new LinkedListNode<>(4189L, null, null);
+    public static void solveWithLinkedList(int blinks){
+        LinkedListNode<Long> inputHead = new LinkedListNode<>(4189L, null, null); //we should get the input as a param from main, that should read it from a class in the drivers package
         inputHead.addAfter(8L);
         inputHead.addAfter(0L);
         inputHead.addAfter(7478611L);
@@ -30,40 +28,7 @@ public class Main {
 
     }
 
-    private static void iterate(LinkedListNode<Long> head){
-        LinkedListNode<Long> currentNode = head;
-        while(currentNode != null){
-            if(currentNode.getData() == 0){
-                currentNode.setData(1L);
-                currentNode = currentNode.getNodeAfter();
-                continue;
-            }
-
-            String engraving = String.valueOf(currentNode.getData());
-            int engravingLength = engraving.length();
-
-            if(engravingLength % 2 == 0){
-                Long leftEngraving = Long.valueOf(engraving.substring(0, engravingLength/2)); //leading zeros will get ignored when the conversion happens
-                Long rightEngraving = Long.valueOf(engraving.substring(engravingLength/2));
-
-                currentNode.addBefore(leftEngraving);
-                currentNode.addBefore(rightEngraving);
-                LinkedListNode<Long> nodeToRemove = currentNode;
-                currentNode = currentNode.getNodeAfter();
-                nodeToRemove.remove();
-                continue;
-            }
-            else{
-                currentNode.setData(currentNode.getData() * 2024);
-                currentNode = currentNode.getNodeAfter();
-                continue;
-            }
-
-        }
-
-    }
-
-    private static void solveWithArrayList(int blinks){
+    public static void solveWithArrayList(int blinks){
         ArrayList<Long> engravings = new ArrayList<>();
         engravings.add(4189L);
         engravings.add(413L);
@@ -108,5 +73,37 @@ public class Main {
         System.out.println(engravings.size());
     }
 
+    private static void iterate(LinkedListNode<Long> head){
+        LinkedListNode<Long> currentNode = head;
+        while(currentNode != null){
+            if(currentNode.getData() == 0){
+                currentNode.setData(1L);
+                currentNode = currentNode.getNodeAfter();
+                continue;
+            }
+
+            String engraving = String.valueOf(currentNode.getData());
+            int engravingLength = engraving.length();
+
+            if(engravingLength % 2 == 0){
+                Long leftEngraving = Long.valueOf(engraving.substring(0, engravingLength/2)); //leading zeros will get ignored when the conversion happens
+                Long rightEngraving = Long.valueOf(engraving.substring(engravingLength/2));
+
+                currentNode.addBefore(leftEngraving);
+                currentNode.addBefore(rightEngraving);
+                LinkedListNode<Long> nodeToRemove = currentNode;
+                currentNode = currentNode.getNodeAfter();
+                nodeToRemove.remove();
+                continue;
+            }
+            else{
+                currentNode.setData(currentNode.getData() * 2024);
+                currentNode = currentNode.getNodeAfter();
+                continue;
+            }
+
+        }
+
+    }
 
 }

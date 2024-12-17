@@ -1,6 +1,8 @@
 # Code of Advent Day 11.
 
 ## The main file contains 2 solution.
+If you didn't see this challenge yet, you can check it out at https://adventofcode.com/2024/day/11
+
 ### Solution 1 
 - SolveWithLinkedList() 
 

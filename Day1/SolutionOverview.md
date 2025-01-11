@@ -15,7 +15,7 @@ A more optimal solution would be to compare the elements already when the second
 ## Part 2
 The most straight forward way to solve Part 2 is to iterate through fhe first list, then for every element also iterate through the second list and count the occurrences.
 
-But there's better solutions then using a nested loop with the time complexity of n^2.
+But the time complexity of this (nested loop) is n^2, and there are better solutions than this. 
 
 We can create a map from the second array. (The keys of the map are the values of the second array. The value for each key is the number of times the key appeared in the second array)
 

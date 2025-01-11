@@ -1,0 +1,9 @@
+Solution for Code of Advent Day1
+check out the task here: https://adventofcode.com/2024/day/1
+
+Part 1
+total distance: 2031679
+
+Part 2
+similarity score: 19678534
+

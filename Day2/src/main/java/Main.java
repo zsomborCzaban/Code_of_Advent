@@ -5,7 +5,6 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-
         List<List<Integer>> reports = null;
 
         try {

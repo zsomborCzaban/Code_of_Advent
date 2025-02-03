@@ -54,7 +54,7 @@ public class Solutions {
 
             if(i >= 1){
                 isValidReport = isValidReport || (Utils.isValidNeighbours(report.get(i-1), report.get(i+1), isAscending) && isSafeReport(report.subList(i+1, report.size()), isAscending));
-            } else {
+            } else {    //if the ignored level is the first level, then it doesn't have a previous neighbour
                 isValidReport = isValidReport || isSafeReport(report.subList(i+1, report.size()), isAscending);
             }
 

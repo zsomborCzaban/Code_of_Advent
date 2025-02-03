@@ -1,5 +1,5 @@
 # Code of Advent Day 1.
-If you didn't see this challenge yet, you can check it out at https://adventofcode.com/2024/day/11
+If you didn't see this challenge yet, you can check it out at https://adventofcode.com/2024/day/1
 
 ## Overview
  The program consists of 3 steps:

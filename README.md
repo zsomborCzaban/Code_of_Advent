@@ -9,7 +9,7 @@
   <p>Welcome to the repository of my solutions to Code of Advent 2024<p/>
 </div>
 
-Each Day module has a SolutionPlan.md that can give you a good overview of the solution.
+Each Day module has a SolutionPlan.md that can give you a good overview of the solution. (Originally I wanted to solve and publish each day, but I got distracted with other hobbies)
 
 Each Day module tries to follow Clean Architecture. I'm using these tasks to practice and get used to following Clean Architecture even tough the size of the code would not necessarily demand it.
 
